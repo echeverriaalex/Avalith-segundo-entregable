@@ -10,12 +10,12 @@ El soporte de la comunidad es mejor en el caso de las bases no relacionales.
 
 - ¿Qué diferencias hay entre JWT y cookies, qué ventajas da cada uno?
 
-    -La autenticación basada en cookies presenta un estado (es stateful).
+    La autenticación basada en cookies presenta un estado (es stateful).
 
 Al iniciar sesión, luego que un usuario envía sus credenciales (y estas se validan), el servidor registra datos (con el fin de recordar que el usuario se ha identificado correctamente). Estos datos que se registran en el backend, en correspondencia con el identificador de sesión, es lo que se conoce como estado.
 En el lado del cliente una cookie es creada para almacenar el identificador de sesión, mientras que los datos se almacenan en el servidor (y son llamados variables de sesión).
 
-    -La autenticación basada en tokens carece de estado (es stateless).
+    La autenticación basada en tokens carece de estado (es stateless).
 
 El servidor ya no guarda información de qué usuarios están conectados o qué tokens se han emitido. Esto es así porque cada solicitud realizada al servidor va acompañada de un token, y el servidor verifica la autenticidad de la solicitud basándose únicamente en el token. JWT define un formato para los tokens, pero no nos ata a ningún mecanismo de persistencia de datos en el lado del cliente y tampoco a ninguna regla de cómo se debe transportar el token. Los tokens se envían generalmente como un Authorization header, con el valor Bearer {JWT}; pero pueden enviarse también en el cuerpo de una petición POST o incluso como un query parameter.
 
