@@ -13,7 +13,7 @@ router.get('/login', UsersController.login);
 router.get('/users/:id', checkAdmin, UsersController.getUser);
 router.post('/user', UsersController.createUser); // seria como el register, sign up
 router.put('/editme', checkLoggedUser, UsersController.editMe);
-router.get('/profile', checkLoggedUser, UsersController.viewMyProfile);
+router.get('/profile', checkLoggedUser, UsersController.viewMyProfile); // obtengo todos mis datos
 router.put('/user/:username', checkAdmin, UsersController.editUser);
 router.delete('/delete/:username', checkAdmin, UsersController.deleteUser);
 
