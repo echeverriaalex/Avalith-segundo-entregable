@@ -50,7 +50,7 @@ const deleteCar = (req, res, next) => {
             username: usernamecurrent
         }
     })
-    .then(user => res.status(201).send(`The car of user has been delete successfully`))
+    .then(user => res.status(202).send(`The car of user has been delete successfully`))
     .catch(err => next(err));
 }
 
